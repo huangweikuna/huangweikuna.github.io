@@ -48,101 +48,6 @@
   </url>
   
   <url>
-    <loc>/tags/amoji/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/bamoji/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/diagram/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/emoji/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/emoji-support/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/gamoji/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/namoji/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/test-viz/</loc>
-    <lastmod>2019-11-18T21:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/test-wavedrom/</loc>
-    <lastmod>2019-11-18T18:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/test-js-sequence-diagrams/</loc>
-    <lastmod>2019-11-18T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/diagram/</loc>
-    <lastmod>2019-11-17T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/test-mermaid/</loc>
-    <lastmod>2019-11-17T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/math/</loc>
-    <lastmod>2019-11-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/test-mathjax/</loc>
-    <lastmod>2019-11-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/test-katex/</loc>
-    <lastmod>2019-11-15T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/series/a/</loc>
-    <lastmod>2019-11-14T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/test-flowchart/</loc>
-    <lastmod>2019-11-14T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/series/</loc>
-    <lastmod>2019-11-14T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/gallery/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
   </url>
@@ -163,7 +68,15 @@
   </url>
   
   <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
     <loc>/tags/index/</loc>
+  </url>
+  
+  <url>
+    <loc>/series/</loc>
   </url>
   
 </urlset>
