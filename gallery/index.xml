@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Galleries on huangweikun&#39;world</title>
+    <link>/gallery/</link>
+    <description>Recent content in Galleries on huangweikun&#39;world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>huangweikuna@foxmail.com (huangweikun)</managingEditor>
+    <webMaster>huangweikuna@foxmail.com (huangweikun)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
+    
+        <atom:link href="/gallery/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>引用图</title>
+        <link>/gallery/photo/</link>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+        <author>huangweikuna@foxmail.com (huangweikun)</author>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
+        <guid>/gallery/photo/</guid>
+        <description>文章图片引用图来自 Pixabay</description>
+        
+        <dc:creator>huangweikun</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

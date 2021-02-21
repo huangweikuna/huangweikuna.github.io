@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Categories on huangweikun&#39;world</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on huangweikun&#39;world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>huangweikuna@foxmail.com (huangweikun)</managingEditor>
+    <webMaster>huangweikuna@foxmail.com (huangweikun)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>diagram</title>
+        <link>/categories/diagram/</link>
+        <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+        <author>huangweikuna@foxmail.com (huangweikun)</author>
+        
+        <guid>/categories/diagram/</guid>
+        <description></description>
+        
+        <dc:creator>huangweikun</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>math</title>
+        <link>/categories/math/</link>
+        <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
+        <author>huangweikuna@foxmail.com (huangweikun)</author>
+        
+        <guid>/categories/math/</guid>
+        <description></description>
+        
+        <dc:creator>huangweikun</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
