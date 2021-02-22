@@ -3,18 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/showcase/hugo/hugo-theme-zzo/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/showcase/hugo/hugo-theme-zdoc/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/</loc>
-    <lastmod>2020-02-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/git/</loc>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/git%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -24,16 +34,6 @@
   
   <url>
     <loc>/tags/hugo/</loc>
-    <lastmod>2020-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-02-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,11 +68,15 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/showcase/hugo/hugo-theme-zdoc/</loc>
   </url>
   
   <url>
-    <loc>/tags/index/</loc>
+    <loc>/showcase/hugo/hugo-theme-zzo/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
   </url>
   
   <url>
