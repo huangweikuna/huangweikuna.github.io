@@ -31,7 +31,7 @@
 1 2 3 4 5 6 7 8 9  [daftaupe-hugo] name=Copr repo for hugo owned by daftaupe baseurl=https://copr-be.cloud.fedoraproject.org/results/daftaupe/hugo/epel-7-$basearch/ type=rpm-md skip_if_unavailable=True gpgcheck=1 gpgkey=https://copr-be.cloud.fedoraproject.org/results/daftaupe/hugo/pubkey.gpg repo_gpgcheck=0 enabled=1   1 2 3 4  # init hugo serve # 发布新文章 # hugo serve -e production --disableFastRender # 生产环境, enables full re-renders on changes   常用参数介绍 1 2 3 4 5 6 7 8 9 10 11  --bind=&amp;#34;127.</description>
         
         <dc:creator>huangweikun</dc:creator>
-        
+        <media:content url="images/cover/hugo-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

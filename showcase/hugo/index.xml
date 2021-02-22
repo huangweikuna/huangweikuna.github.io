@@ -21,13 +21,22 @@
 
       
       <item>
-        <title>Hugo Zzo Theme</title>
-        <link>/showcase/hugo/hugo-theme-zzo/</link>
-        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
+        <title></title>
+        <link>/showcase/hugo/hugo-theme-zdoc/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>huangweikuna@foxmail.com (huangweikun)</author>
-        <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>/showcase/hugo/hugo-theme-zzo/</guid>
-        <description></description>
+        
+        <guid>/showcase/hugo/hugo-theme-zdoc/</guid>
+        <description>#&amp;mdash;
+#title: &amp;ldquo;Hugo zDoc Theme&amp;rdquo;
+#date: 2020-01-19T21:13:42+09:00
+#description: Make a documentation with hugo zdoc theme!
+#weight: 1
+#link: https://github.com/zzossig/hugo-theme-zdoc
+#repo: https://github.com/zzossig/hugo-theme-zdoc
+#pinned: true
+#thumb: feature3/css3-bare.png
+#&amp;mdash;</description>
         
         <dc:creator>huangweikun</dc:creator>
         
@@ -39,13 +48,22 @@
       </item>
       
       <item>
-        <title>Hugo zDoc Theme</title>
-        <link>/showcase/hugo/hugo-theme-zdoc/</link>
-        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
+        <title></title>
+        <link>/showcase/hugo/hugo-theme-zzo/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>huangweikuna@foxmail.com (huangweikun)</author>
-        <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>/showcase/hugo/hugo-theme-zdoc/</guid>
-        <description></description>
+        
+        <guid>/showcase/hugo/hugo-theme-zzo/</guid>
+        <description>#&amp;mdash;
+#title: &amp;ldquo;Hugo Zzo Theme&amp;rdquo;
+#date: 2020-01-19T21:13:42+09:00
+#description: Make a blog with hugo zzo theme!
+#weight: 2
+#link: https://github.com/zzossig/hugo-theme-zzo
+#repo: https://github.com/zzossig/hugo-theme-zzo
+#pinned: true
+#thumb: feature3/css3.png
+#&amp;mdash;</description>
         
         <dc:creator>huangweikun</dc:creator>
         
