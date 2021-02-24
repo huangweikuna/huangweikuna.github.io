@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Posts on huangweikun&#39;world</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on huangweikun&#39;world</description>
+    <title>kubernetes on huangweikun&#39;world</title>
+    <link>/tags/kubernetes/</link>
+    <description>Recent content in kubernetes on huangweikun&#39;world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>huangweikuna@foxmail.com (huangweikun)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
 
       
@@ -59,55 +59,6 @@ Jsonnet介绍 Jsonnet是一个模版语言工具，语法酷似Python，所以�
           
             
               <category>kubernetes</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>git 操作命令</title>
-        <link>/posts/git%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</link>
-        <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
-        <author>huangweikuna@foxmail.com (huangweikun)</author>
-        <atom:modified>Sat, 22 Feb 2020 00:00:00 +0000</atom:modified>
-        <guid>/posts/git%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</guid>
-        <description>初始化代码库 1 2 3 4 5 6  # 在当前目录新建一个Git代码库 git init # 新建一个目录，将其初始化为Git代码库 git init [project-name] # 下载一个项目和它的整个代码历史 git clone [url]   配置全局信息 1 2 3 4 5 6 7  # 显示当前的Git配置 git config --list # 编辑Git配置文件 git config -e [--global] # 设置提交代码时的用户信息 git config [--global] user.name &amp;#34;[name]&amp;#34; git config [--global] user.email &amp;#34;[email address]&amp;#34;   代码提交 1 2 3 4 5 6 7 8 9 10 11 12 13 14  # 添加当前目录的所有文件到暂存区 git add .</description>
-        
-        <dc:creator>huangweikun</dc:creator>
-        <media:content url="images/cover/git-logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>git</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Blog搭建笔记</title>
-        <link>/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</link>
-        <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
-        <author>huangweikuna@foxmail.com (huangweikun)</author>
-        <atom:modified>Mon, 17 Feb 2020 00:00:00 +0000</atom:modified>
-        <guid>/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</guid>
-        <description>CentOS  运行环境 安装 1 2  # 安装go yum -y install golang   添加epel repo vim /etc/yum.repos.d/hugo.repo
-1 2 3 4 5 6 7 8 9  [daftaupe-hugo] name=Copr repo for hugo owned by daftaupe baseurl=https://copr-be.cloud.fedoraproject.org/results/daftaupe/hugo/epel-7-$basearch/ type=rpm-md skip_if_unavailable=True gpgcheck=1 gpgkey=https://copr-be.cloud.fedoraproject.org/results/daftaupe/hugo/pubkey.gpg repo_gpgcheck=0 enabled=1   1 2 3 4  # init hugo serve # 发布新文章 # hugo serve -e production --disableFastRender # 生产环境, enables full re-renders on changes   常用参数介绍 1 2 3 4 5 6 7 8 9 10 11  --bind=&amp;#34;127.</description>
-        
-        <dc:creator>huangweikun</dc:creator>
-        <media:content url="images/cover/hugo-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>hugo</category>
             
           
         

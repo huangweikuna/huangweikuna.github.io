@@ -14,7 +14,7 @@
     <managingEditor>huangweikuna@foxmail.com (huangweikun)</managingEditor>
     <webMaster>huangweikuna@foxmail.com (huangweikun)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -38,6 +38,52 @@
         
       
 
+      
+      <item>
+        <title>Prometheus 监控 Kubernetes 集群</title>
+        <link>/posts/prometheus%E7%9B%91%E6%8E%A7kubenetes%E9%9B%86%E7%BE%A4/</link>
+        <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+        <author>huangweikuna@foxmail.com (huangweikun)</author>
+        <atom:modified>Mon, 24 Feb 2020 00:00:00 +0000</atom:modified>
+        <guid>/posts/prometheus%E7%9B%91%E6%8E%A7kubenetes%E9%9B%86%E7%BE%A4/</guid>
+        <description>Prometheus介绍 首先看到Prometheus官方架构图：
+exporter和pushgatway 数据通过exporter和pushgatway收集存储起来，再由Prometheus服务进行拉取操作。这样的设计把数据压力分摊到了各个收集节点，不会导致收集节点过多而Prometheus承受不住数据冲击而宕机。
+对于收集的方式通过exporter或pushgatway暴露http/https端口地址进行采集，也就是除了官方提供的exporter之外，我们可以很好的进行定制exporter，只需满足Prometheus的数据格式，在暴露到地址即可。具体细节可以查看 开发自己的exporter。pushgatway 用于不方便去提供一个采集接口时，Prometheus提供的官方接口，可以直接把数据发到pushgatway中，这样也可以收集到发送到数据。但是pushgatway不保证数据的生命周期在你的管控之中，因为pushgatway的控制权在Prometheus，如果pushgatway宕机了，你发的数据就会丢失。所以官方推荐短期任务可以借助pushgatway，而不自己开发exporter。
+Prometheus Server 在使用Prometheus监控时，需要有一个念头：Prometheus监控指标，而不能详细到具体数据。而指标不是百分百精确，它有大概的趋势，来帮助我们发现和预判问题。如果需要详细的问题调查体系，则需要日志收集框架和链路追踪框架支撑。所以查看问题的顺序是这样子的：指标监控-&amp;gt;日志查询-&amp;gt;链路追踪查询，获得的信息逐渐增多，但是所要做的事也增多了。
+了解了上面的信息，还需要注意的是：Prometheus认为只有最近的监控数据才有查询的需要，所有Prometheus本地存储的设计初衷只是保存短期（如一个月）的数据，不会针对大量的历史数据进行存储。也就是说，数据保留可能不会太久（长久的数据价值可能远超保留它的代价）。如果需要存储，则需要其他的扩展方案。在图中可以看到，对于存储Prometheus使用自带的TSDB进行存储，对于采集节点服务发现和Kubernetes集成，这也是很关键的一点。
+数据展示、报警 Prometheus收集数据存储到本地，这些数据可以配置成rule、alert两种聚合数据，rule会被Grafana收集进行展示、alert会被Alertmanager进行收集报警。这两个组件的灵活度都特别的高，但是不是本节重点，继续往后看。
+使用 在之前开发流程是这样的，下载Prometheus、Exporter、Grafana、Alertmanager。之后在Prometheus中配置对应的exporter信息，rule、alert。当然这些都可以通过Docker或者Kubernetes的配置文件一件部署，在kubernetes下则可能是这样子的：
+可以看到Prometheus连接着其他的组件。当然，连接会通过Service组件连接，防止exporter或组件宕机、升级在集群中重新调度时的ip丢失。但是如果需要添加组件，如新的采集节点，则需要手动修改配置文件。这样维护起来在大集群里可能成本比较高。于是之后就出现了Prometheus-Operator。
+Prometheus-Operator是在Kubernetes中的一组CRD，所以它所有的操作都是依赖于Kubernetes的。通过Kubernetes平台优化了上面的问题和添加功能，先看看架构图：
+可以看到在Prometheus和组件的连接中又抽象了一层ServiceMonitor，ServiceMonitor通过label进行选择组件的连接，和Kubernetes中的一样，我们通过操作类似label选择器的机制去管理组件。除了和Prometheus的连接管理之外，Operator还管理着Grafana和Alertmanager，它们各自的配置文件都可以动态进行更新，此外还抽象出了rule组件，这样rule、alert都可以进行动态更新和管理。
+上面所有的管理工作都是由Operator组件完成，它通过prometheus对应reload的http接口/-/reload，如果Operator监听到了配置的变化，就对调用此接口进行配置动态更新。具体细节可能会更加复杂一点。
+Kube-Prometheus介绍 有了Kube-Prometheus之后，虽然知道它扩展很方便，但是我们还是希望有一个通用的配置，之后我们在通过修改配置去定制自己的监控集群。原因是一套完整的监控架构需要写的配置文件还是挺多的。:(
+于是就有了Kube-Prometheus项目，Kube-Prometheus项目可以通过一些配置快速的生成一套适应你集群的配置文件，之后你在修改生成的配置去适应你的集群，这样就节省了很多时间了。下面就介绍它是如何实现的。
+ 使用官方推荐的Kube-Prometheus进行部署，原理是使用Jasonnet工具生成配置文件。 使用Helm社区维护的Chart部署  使用哪一种方法好？
+ jsonnet本质是类似模版语言工具进行生成配置文件， helm 从某种程度上来说也是做这件事的，由于 Prometheus 相关社区(Grafana、Prometheus-Operator、 Kube-prometheus) 都使用 Jsonnet 做配置管理, 应该有它的理由。 Helm维护的配置文件没有Jsonnet来的完备、及时。（官方亲儿子） Json格式上的优势，它不需要考虑空格锁进问题。  我们这里就选择Jsonnet方式进行生成配置然后部署，在开始前先简单介绍jsonnet。
+Jsonnet介绍 Jsonnet是一个模版语言工具，语法酷似Python，所以上手起来还是满快的。下面通过例子快速了解下它能做到什么，具体细节和语法推荐到官方上学习。jsonnet官网
+下面你可以跟着做，然后观察它的输出。当然，安装jsonnet是必须的，如果你还要使用Kube-Prometheus的话。
+ 最后的引用库文件代码会生成一个库文件，除此之外不会有其他输出文件。
+   jsonnet 练习  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118  # 安装 Jsonnet(C 实现) brew install jsonnet # 也可以安装 Go 实现 go get github.</description>
+        
+        <dc:creator>huangweikun</dc:creator>
+        <media:content url="images/cover/kube-prometheus.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>prometheus</category>
+            
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>git 操作命令</title>
